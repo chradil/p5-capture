@@ -7,6 +7,6 @@ function setup() {
 }
 
 function draw() {
-  image(capture, 200, 100, width, width * capture.height / capture.width);
+  image(capture, 300, 50, width, width * capture.height / capture.width);
 
 }
