@@ -7,6 +7,6 @@ function setup() {
 }
 
 function draw() {
-  image(capture, 0, 0, 800, 800);
+  image(capture, 0, 0, width, height);
 
 }
