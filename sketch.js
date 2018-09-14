@@ -1,12 +1,12 @@
 var capture;
 
 function setup() {
-  createCanvas(480, 480);
+  createCanvas(800, 800);
   capture = createCapture(VIDEO);
   capture.hide();
 }
 
 function draw() {
-  image(capture, 0, 0, width, width * capture.height / capture.width);
+  image(capture, 0, 0, 800, 800);
 
 }
