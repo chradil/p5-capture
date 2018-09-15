@@ -38,7 +38,9 @@ function modelReady() {
 function draw() {
   image(video, 0, 0, width, height);
  // image(photo, 0, 0, width, height);
-
+  
+  
+drawBody();
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
@@ -77,3 +79,34 @@ function drawSkeleton() {
     }
   }
 }
+
+function drawBody() {
+  fill(0);
+  stroke(255);
+  beginShape();
+  vertex(0,0);
+  vertex(800,0);
+  vertex(800,600);
+  vertex(0, 600);
+  
+  beginContour();
+  vertex(480,600);
+  vertex(500,400);
+  vertex(600,260);
+  vertex(460,120);
+  vertex(420,160);
+  vertex(540,260);
+  vertex(460,340);
+  vertex(340,340);
+  vertex(260,260);
+  vertex(380,160);
+  vertex(340,120);
+  vertex(200,260);
+  vertex(300,400);
+  vertex(320,600);
+  endContour();
+  
+  endShape(CLOSE);
+}
+
+  
