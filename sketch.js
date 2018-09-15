@@ -107,10 +107,13 @@ function drawBody() {
   endContour();
   
   beginContour();
-  vertex(340,220);
+    vertex(340,320);
+    vertex(460,320);  
   vertex(460,220);
-  vertex(460,320);
-  vertex(340,320);
+  vertex(340,220);
+
+
+
 
   endContour();
 
