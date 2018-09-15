@@ -9,16 +9,16 @@ PoseNet example using p5.js
 === */
 
 let video;
-let photo;
+//let photo;
 let poseNet;
 let poses = [];
 
 function setup() {
   createCanvas(800, 600);
   video = createCapture(VIDEO);
-  photo = loadImage("imaging_1.jpg");
+  //photo = loadImage("imaging_1.jpg");
   video.size(width, height);
-photo.size(width,height);
+//photo.size(width,height);
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
