@@ -107,7 +107,11 @@ function drawBody() {
   endContour();
   
   beginContour();
-  ellipse(340,220,100,100);
+  vertex(340,220);
+  vertex(460,220);
+  vertex(460,320);
+  vertex(340,320);
+
   endContour();
 
   endShape(CLOSE);
