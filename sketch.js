@@ -59,15 +59,14 @@ function drawKeypoints()  {
       //experimental
       let rightWrist = pose.keypoints[10];
       let leftWrist = pose.keypoints[9];
-      let rightShoulder = pose.keypoints[6];
-      let leftShoulder = pose.keypoints[5];
+      let nose = pose.keypoints[0];
       
-      if (rightWrist.position.y < rightShoulder.position.y) {
+      if (rightWrist.position.y < nose.position.y) {
         fill(0,255,0);
         rect(0,0,100,100);
       }
       
-       if (leftWrist.position.y < leftShoulder.position.y) {
+       if (leftWrist.position.y < nose.position.y) {
         fill(0,0,255);
         rect(100,0,100,100);
        }
