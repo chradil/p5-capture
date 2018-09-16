@@ -97,7 +97,7 @@ function drawSkeleton() {
 }
 
 function drawBody() {
-  fill(0);
+  fill(0, 150);
   noStroke();
   beginShape();
   vertex(0,0);
