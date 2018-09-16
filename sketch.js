@@ -62,7 +62,7 @@ function drawKeypoints()  {
       let nose = pose.keypoints[0];
       
       if (rightWrist.position.y < nose.position.y) {
-        fill(0,255,0);
+        fill(rightWrist.position.x,0, rightWrist.position.y, random(200));
         ellipse(rightWrist.position.x+random(50), rightWrist.position.y+random(50),random(100),random(100));
         ellipse(rightWrist.position.x+random(50), rightWrist.position.y-random(50),random(100),random(100));
         ellipse(rightWrist.position.x-random(50), rightWrist.position.y+random(50),random(100),random(100));
