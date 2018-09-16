@@ -62,17 +62,23 @@ function drawKeypoints()  {
       let nose = pose.keypoints[0];
       
       if (rightWrist.position.y < nose.position.y) {
-        fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(150));
+        fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
-        ellipse(rightWrist.position.x+random(50), rightWrist.position.y+random(50),random(100),random(100));
-        ellipse(rightWrist.position.x+random(50), rightWrist.position.y-random(50),random(100),random(100));
-        ellipse(rightWrist.position.x-random(50), rightWrist.position.y+random(50),random(100),random(100));
-        ellipse(rightWrist.position.x-random(50), rightWrist.position.y-random(50),random(100),random(100));
-      }
+        quad(rightWrist.position.x+random(50), rightWrist.position.y-random(50),
+            rightWrist.position.x+random(50), rightWrist.position.y-random(50),
+            rightWrist.position.x+random(50), rightWrist.position.y-random(50),
+            rightWrist.position.x+random(50), rightWrist.position.y-random(50)
+            );
+        
+             }
       
        if (leftWrist.position.y < nose.position.y) {
-        fill(0,0,255);
-        ellipse(100,0,100,100);
+        fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
+        quad(leftWrist.position.x+random(50), leftWrist.position.y-random(50),
+            leftWrist.position.x+random(50), leftWrist.position.y-random(50),
+            leftWrist.position.x+random(50), leftWrist.position.y-random(50),
+            leftWrist.position.x+random(50), leftWrist.position.y-random(50)
+            );
        }
       
  // Only draw an ellipse is the pose probability is bigger than 0.2
