@@ -106,27 +106,27 @@ function drawBody() {
   vertex(0, 600);
   
   beginContour();
-  vertex(480,600);
-  vertex(500,400);
+  vertex(600,600);
+  vertex(600,500);
+  vertex(760,260);
+  vertex(510,20);
+  vertex(440,100);
   vertex(600,260);
-  vertex(460,120);
-  vertex(420,160);
-  vertex(540,260);
-  vertex(460,340);
-  vertex(340,340);
-  vertex(260,260);
-  vertex(380,160);
-  vertex(340,120);
+  vertex(500,360);
+  vertex(300,360);
   vertex(200,260);
-  vertex(300,400);
-  vertex(320,600);
+  vertex(360,100);
+  vertex(280,20);
+  vertex(40,260);
+  vertex(200,500);
+  vertex(200,600);
   endContour();
   
   beginContour();
-    vertex(340,320);
-    vertex(460,320);  
-  vertex(460,220);
-  vertex(340,220);
+    vertex(480,340);
+    vertex(480,180);  
+  vertex(320,180);
+  vertex(320,340);
 
 
 
