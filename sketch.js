@@ -63,15 +63,18 @@ function drawKeypoints()  {
       
       if (rightWrist.position.y < nose.position.y) {
         fill(0,255,0);
-        rect(0,0,100,100);
+        ellipse(rightWrist.position.x+random(50), rightWrist.position.y+random(50),random(100),random(100));
+        ellipse(rightWrist.position.x+random(50), rightWrist.position.y-random(50),random(100),random(100));
+        ellipse(rightWrist.position.x-random(50), rightWrist.position.y+random(50),random(100),random(100));
+        ellipse(rightWrist.position.x-random(50), rightWrist.position.y-random(50),random(100),random(100));
       }
       
        if (leftWrist.position.y < nose.position.y) {
         fill(0,0,255);
-        rect(100,0,100,100);
+        ellipse(100,0,100,100);
        }
       
-      // Only draw an ellipse is the pose probability is bigger than 0.2
+ // Only draw an ellipse is the pose probability is bigger than 0.2
       if (keypoint.score > 0.2) {
         fill(255, 0, 0);
         noStroke();
@@ -97,7 +100,7 @@ function drawSkeleton() {
 }
 
 function drawBody() {
-  fill(0, 150);
+  fill(0, 200);
   noStroke();
   beginShape();
   vertex(0,0);
