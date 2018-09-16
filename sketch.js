@@ -44,6 +44,9 @@ drawBody();
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
+  
+  textSize(36);
+  text('HOLD POSE', 350, 500);
 }
 
 // A function to draw ellipses over the detected keypoints
