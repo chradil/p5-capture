@@ -46,7 +46,7 @@ drawBody();
   drawSkeleton();
   
   textSize(36);
-  text('HOLD POSE', 350, 500);
+  text('HOLD POSE', 325, 500);
 }
 
 // A function to draw ellipses over the detected keypoints
@@ -67,20 +67,20 @@ function drawKeypoints()  {
       if (rightWrist.position.y < nose.position.y) {
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
-        quad(rightWrist.position.x+random(50), rightWrist.position.y-random(50),
-            rightWrist.position.x+random(50), rightWrist.position.y-random(50),
-            rightWrist.position.x+random(50), rightWrist.position.y-random(50),
-            rightWrist.position.x+random(50), rightWrist.position.y-random(50)
+        quad(rightWrist.position.x-random(50), rightWrist.position.y-random(100),
+            rightWrist.position.x+random(50), rightWrist.position.y-random(100),
+            rightWrist.position.x+random(50), rightWrist.position.y-random(100),
+            rightWrist.position.x-random(50), rightWrist.position.y-random(100)
             );
         
              }
       
        if (leftWrist.position.y < nose.position.y) {
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
-        quad(leftWrist.position.x+random(50), leftWrist.position.y-random(50),
-            leftWrist.position.x+random(50), leftWrist.position.y-random(50),
-            leftWrist.position.x+random(50), leftWrist.position.y-random(50),
-            leftWrist.position.x+random(50), leftWrist.position.y-random(50)
+        quad(leftWrist.position.x-random(50), leftWrist.position.y-random(100),
+            leftWrist.position.x+random(50), leftWrist.position.y-random(100),
+            leftWrist.position.x+random(50), leftWrist.position.y-random(100),
+            leftWrist.position.x-random(50), leftWrist.position.y-random(100)
             );
        }
       
@@ -111,7 +111,7 @@ function drawSkeleton() {
 
 function drawBody() {
   fill(0, 200);
-  noStroke();
+  stroke(255,0,0);
   beginShape();
   vertex(0,0);
   vertex(800,0);
