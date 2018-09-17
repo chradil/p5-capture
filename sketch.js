@@ -12,6 +12,7 @@ let video;
 //let photo;
 let poseNet;
 let poses = [];
+var milliseconds = millis();
 
 function setup() {
   createCanvas(800, 600);
@@ -46,6 +47,9 @@ drawBody();
   drawSkeleton();
   
   textSize(36);
+  if (milliseconds < 7000){
+    text('RAISE YOUR ARMS OVER YOUR HEAD', 325, 200);
+  }
   text('HOLD POSE', 325, 500);
 }
 
