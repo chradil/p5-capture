@@ -64,11 +64,12 @@ function drawKeypoints()  {
       //defining variables for glitching animation
       let rightWrist = pose.keypoints[10];
       let leftWrist = pose.keypoints[9];
-      let nose = pose.keypoints[0];
+      let leftShoulder = pose.keypoints[5];
+      let rightShoulder = pose.keypoints[6];
       
       
       //glitching animation - right hand
-      if (rightWrist.position.y < nose.position.y) {
+      if (rightWrist.position.y < rightShoulder.position.y) {
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
         quad(rightWrist.position.x-random(50), rightWrist.position.y-random(100),
@@ -80,19 +81,25 @@ function drawKeypoints()  {
               //glitching other keypoints
       if ( (Math.abs(rightWrist.position.x - keypoint.position.x) < 50) && (Math.abs(rightWrist.position.y - keypoint.position.y) < 50)){
         fill(255);
-        ellipse(keypoint.position.x, keypoint.position.y, 30, 30);
+        ellipse(keypoint.position.x, keypoint.position.y, 20, 20);
         }
         
              }
       
       //glitching animation - left hand
-       if (leftWrist.position.y < nose.position.y) {
+       if (leftWrist.position.y < leftShoulder.position.y) {
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
         quad(leftWrist.position.x-random(50), leftWrist.position.y-random(100),
             leftWrist.position.x+random(50), leftWrist.position.y-random(100),
             leftWrist.position.x+random(50), leftWrist.position.y-random(100),
             leftWrist.position.x-random(50), leftWrist.position.y-random(100)
             );
+         
+                   //glitching other keypoints
+      if ( (Math.abs(leftWrist.position.x - keypoint.position.x) < 50) && (Math.abs(leftWrist.position.y - keypoint.position.y) < 50)){
+        fill(255);
+        ellipse(keypoint.position.x, keypoint.position.y, 20, 20);
+        }
        }
       
       
