@@ -78,7 +78,7 @@ function drawKeypoints()  {
             );
         
               //glitching other keypoints
-      if ( (rightWrist.position.x - keypoint.position.x < 20) && (rightWrist.position.y - keypoint.position.y < 20)){
+      if ( (Math.abs(rightWrist.position.x - keypoint.position.x) < 50) && (Math.abs(rightWrist.position.y - keypoint.position.y) < 50)){
         fill(255);
         ellipse(keypoint.position.x, keypoint.position.y, 30, 30);
         }
