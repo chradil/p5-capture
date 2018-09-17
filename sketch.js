@@ -79,7 +79,7 @@ function drawKeypoints()  {
             );
         
               //glitching other keypoints
-      if ( (Math.abs(rightWrist.position.x - keypoint.position.x) < 50) && (Math.abs(rightWrist.position.y - keypoint.position.y) < 50)){
+      if ( (Math.abs(rightWrist.position.x - keypoint.position.x) < 75) && (Math.abs(rightWrist.position.y - keypoint.position.y) < 75)){
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
         quad(keypoint.position.x-random(50), keypoint.position.y-random(50),
@@ -102,7 +102,7 @@ function drawKeypoints()  {
             );
          
                    //glitching other keypoints
-      if ( (Math.abs(leftWrist.position.x - keypoint.position.x) < 50) && (Math.abs(leftWrist.position.y - keypoint.position.y) < 50)){
+      if ( (Math.abs(leftWrist.position.x - keypoint.position.x) < 75) && (Math.abs(leftWrist.position.y - keypoint.position.y) < 75)){
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
         stroke(255,0,0);
         quad(keypoint.position.x-random(50), keypoint.position.y-random(50),
