@@ -71,7 +71,7 @@ function drawKeypoints()  {
       //glitching animation - right hand
       if (rightWrist.position.y < rightShoulder.position.y && rightWrist.score > 0.2) {
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
-        stroke(255,0,0);
+        //stroke(255,0,0);
         quad(rightWrist.position.x-random(50), rightWrist.position.y-random(100),
             rightWrist.position.x+random(50), rightWrist.position.y-random(100),
             rightWrist.position.x+random(50), rightWrist.position.y-random(100),
@@ -80,8 +80,13 @@ function drawKeypoints()  {
         
               //glitching other keypoints
       if ( (Math.abs(rightWrist.position.x - keypoint.position.x) < 50) && (Math.abs(rightWrist.position.y - keypoint.position.y) < 50)){
-        fill(255);
-        ellipse(keypoint.position.x, keypoint.position.y, 20, 20);
+        fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
+        stroke(255,0,0);
+        quad(keypoint.position.x-random(50), keypoint.position.y-random(50),
+            keypoint.position.x+random(50), keypoint.position.y-random(50),
+            keypoint.position.x+random(50), keypoint.position.y+random(50),
+            keypoint.position.x-random(50), keypoint.position.y+random(50)
+            );
         }
         
              }
@@ -89,6 +94,7 @@ function drawKeypoints()  {
       //glitching animation - left hand
        if (leftWrist.position.y < leftShoulder.position.y && leftWrist.score > 0.2) {
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
+       //stroke(255,0,0);
         quad(leftWrist.position.x-random(50), leftWrist.position.y-random(100),
             leftWrist.position.x+random(50), leftWrist.position.y-random(100),
             leftWrist.position.x+random(50), leftWrist.position.y-random(100),
@@ -97,8 +103,13 @@ function drawKeypoints()  {
          
                    //glitching other keypoints
       if ( (Math.abs(leftWrist.position.x - keypoint.position.x) < 50) && (Math.abs(leftWrist.position.y - keypoint.position.y) < 50)){
-        fill(255);
-        ellipse(keypoint.position.x, keypoint.position.y, 20, 20);
+        fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
+        stroke(255,0,0);
+        quad(keypoint.position.x-random(50), keypoint.position.y-random(50),
+            keypoint.position.x+random(50), keypoint.position.y-random(50),
+            keypoint.position.x+random(50), keypoint.position.y+random(50),
+            keypoint.position.x-random(50), keypoint.position.y+random(50)
+            );
         }
        }
       
