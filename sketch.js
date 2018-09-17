@@ -69,7 +69,7 @@ function drawKeypoints()  {
       
       
       //glitching animation - right hand
-      if (rightWrist.position.y < rightShoulder.position.y) {
+      if (rightWrist.position.y < rightShoulder.position.y && rightWrist.score > 0.2) {
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
         quad(rightWrist.position.x-random(50), rightWrist.position.y-random(100),
@@ -87,7 +87,7 @@ function drawKeypoints()  {
              }
       
       //glitching animation - left hand
-       if (leftWrist.position.y < leftShoulder.position.y) {
+       if (leftWrist.position.y < leftShoulder.position.y && leftWrist.score > 0.2) {
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
         quad(leftWrist.position.x-random(50), leftWrist.position.y-random(100),
             leftWrist.position.x+random(50), leftWrist.position.y-random(100),
