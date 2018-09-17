@@ -59,11 +59,15 @@ function drawKeypoints()  {
       // A keypoint is an object describing a body part (like rightArm or leftShoulder)
       let keypoint = pose.keypoints[j];
       
-      //experimental
+//EXPERIMENTAL
+      
+      //defining variables for glitching animation
       let rightWrist = pose.keypoints[10];
       let leftWrist = pose.keypoints[9];
       let nose = pose.keypoints[0];
       
+      
+      //glitching animation - right hand
       if (rightWrist.position.y < nose.position.y) {
         fill(rightWrist.position.x%255,0, rightWrist.position.y%255, random(100));
         stroke(255,0,0);
@@ -75,6 +79,7 @@ function drawKeypoints()  {
         
              }
       
+      //glitching animation - left hand
        if (leftWrist.position.y < nose.position.y) {
         fill(leftWrist.position.y%255,0, leftWrist.position.x%255, random(100));
         quad(leftWrist.position.x-random(50), leftWrist.position.y-random(100),
@@ -83,6 +88,13 @@ function drawKeypoints()  {
             leftWrist.position.x-random(50), leftWrist.position.y-random(100)
             );
        }
+      
+      //glitching other keypoints
+      if ( (rightWrist.position.x - keypoint.position.x < 50) && (rightWrist.position.y - keypoint.position.y < 50)){
+        fill(255);
+        ellipse(keypoint.position.x, keypoint.position.y, 30, 30);
+        }
+      
       
  // Only draw an ellipse is the pose probability is bigger than 0.2
       if (keypoint.score > 0.2) {
